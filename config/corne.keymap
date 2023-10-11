@@ -5,125 +5,140 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
-
     behaviors {
-        num_1: num_1_exclamation {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUM_1_EXCLAMATION";
-            bindings = <&kp NUM_1>, <&kp EXCLAMATION>;
-            mods = <MOD_LSFT | MOD_RSFT>;
-        };
         num_2: num_2_at {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_2_AT";
             bindings = <&kp NUM_2>, <&kp AT>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
-
         num_3: num_3_hash {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_3_HASH";
             bindings = <&kp NUM_3>, <&kp HASH>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
         num_4: num_4_dollar {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_4_DOLLAR";
             bindings = <&kp NUM_4>, <&kp DOLLAR>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
         num_5: num_5_percent {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_5_PERCENT";
             bindings = <&kp NUM_5>, <&kp PERCENT>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
         num_6: num_6_caret {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_6_CARET";
             bindings = <&kp NUM_6>, <&kp CARET>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
         num_7: num_7_ampersand {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_7_AMPERSAND";
             bindings = <&kp NUM_7>, <&kp AMPERSAND>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
         num_8: num_8_asterisk {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_8_ASTERISK";
             bindings = <&kp NUM_8>, <&kp ASTERISK>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
         num_9: num_9_lparen {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_9_LPAREN";
             bindings = <&kp NUM_9>, <&kp LPAREN>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
         num_0: num_0_rparen {
             compatible = "zmk,behavior-mod-morph";
             label = "NUM_0_RPAREN";
             bindings = <&kp NUM_0>, <&kp RPAREN>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
         backslash: backslash_pipe {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSLASH_PIPE";
             bindings = <&kp BACKSLASH>, <&kp PIPE>;
+
             mods = <MOD_LSFT | MOD_RSFT>;
         };
-    };
-        keymap {
-                compatible = "zmk,keymap";
+        n1: n1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N1";
+            bindings = <&kp NUMBER_1>, <&kp EXCLAMATION>;
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI/ENT | SPC | LWR |   | RSE | SPC  | BKSP |
-                        label = "Base";
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &ht_bl LGUI RET &kp SPACE &mo 1    &mo 2 &kp SPACE &kp BSPC
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  \| | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT |  4  |  5  |  6  |     |      |
-// | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |     |      |
-//                    | GUI |     | SPC |   | ENT |  0  | ALT |
-                        label = "Lower";
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &num_7   &num_8 &num_9    &backslash &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &num_4 &num_5 &num_6 &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &num_1   &num_2 &num_3    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &num_0   &kp RALT
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | ESC  |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        label = "Raise";
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp ESC &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //                    | GUI/ENT | SPC | LWR |   | RSE | SPC  | BKSP |
+
+            label = "Base";
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E            &kp R      &kp T    &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp ESC    &kp A  &kp S  &kp D            &kp F      &kp G    &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C            &kp V      &kp B    &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &ht_bl LGUI RET  &kp SPACE  &mo 1    &mo 2  &kp SPACE  &kp BSPC
+            >;
+        };
+
+        lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  \| | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT |  4  |  5  |  6  |     |      |
+            // | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |     |      |
+            //                    | GUI |     | SPC |   | ENT |  0  | ALT |
+
+            label = "Lower";
+            bindings = <
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &num_7  &num_8    &num_9  &backslash  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &num_4  &num_5    &num_6  &trans      &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &none   &num_2    &num_3  &trans      &trans
+                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &num_0  &kp RALT
+            >;
+        };
+
+        raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | ESC  |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            label = "Raise";
+            bindings = <
+&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+&kp ESC    &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+            >;
+        };
+    };
 };
