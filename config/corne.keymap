@@ -10,6 +10,24 @@
 
 / {
     behaviors {
+        ht_bl: hold_tap_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD TAP BALANCED";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
+        num_1: num_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "N1";
+            bindings = <&kp NUMBER_1>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         num_2: num_2_at {
             compatible = "zmk,behavior-mod-morph";
             label = "NUMBER_2_AT";
@@ -78,14 +96,6 @@
             label = "BACKSLASH_PIPE";
             bindings = <&kp BACKSLASH>, <&kp PIPE>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_1: num_1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "N1";
-            bindings = <&kp NUMBER_1>, <&kp EXCLAMATION>;
-
-            #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
