@@ -12,75 +12,75 @@
     behaviors {
         num_2: num_2_at {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_2_AT";
-            bindings = <&kp NUM_2>, <&kp AT>;
+            label = "NUMBER_2_AT";
+            bindings = <&kp NUMBER_2>, <&kp AT>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_3: num_3_hash {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_3_HASH";
-            bindings = <&kp NUM_3>, <&kp HASH>;
+            label = "NUMBER_3_HASH";
+            bindings = <&kp NUMBER_3>, <&kp HASH>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_4: num_4_dollar {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_4_DOLLAR";
-            bindings = <&kp NUM_4>, <&kp DOLLAR>;
+            label = "NUMBER_4_DOLLAR";
+            bindings = <&kp NUMBER_4>, <&kp DOLLAR>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_5: num_5_percent {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_5_PERCENT";
-            bindings = <&kp NUM_5>, <&kp PERCENT>;
+            label = "NUMBER_5_PERCENT";
+            bindings = <&kp NUMBER_5>, <&kp PERCENT>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_6: num_6_caret {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_6_CARET";
-            bindings = <&kp NUM_6>, <&kp CARET>;
+            label = "NUMBER_6_CARET";
+            bindings = <&kp NUMBER_6>, <&kp CARET>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_7: num_7_ampersand {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_7_AMPERSAND";
-            bindings = <&kp NUM_7>, <&kp AMPERSAND>;
+            label = "NUMBER_7_AMPERSAND";
+            bindings = <&kp NUMBER_7>, <&kp AMPERSAND>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_8: num_8_asterisk {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_8_ASTERISK";
-            bindings = <&kp NUM_8>, <&kp ASTERISK>;
+            label = "NUMBER_8_ASTERISK";
+            bindings = <&kp NUMBER_8>, <&kp ASTERISK>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_9: num_9_lparen {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_9_LPAREN";
-            bindings = <&kp NUM_9>, <&kp LPAREN>;
+            label = "NUMBER_9_LPAREN";
+            bindings = <&kp NUMBER_9>, <&kp LPAREN>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_0: num_0_rparen {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM_0_RPAREN";
-            bindings = <&kp NUM_0>, <&kp RPAREN>;
+            label = "NUMBER_0_RPAREN";
+            bindings = <&kp NUMBER_0>, <&kp RPAREN>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         backslash: backslash_pipe {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSLASH_PIPE";
             bindings = <&kp BACKSLASH>, <&kp PIPE>;
 
-            mods = <MOD_LSFT | MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        n1: n1 {
+        num_1: num_1 {
             compatible = "zmk,behavior-mod-morph";
             label = "N1";
             bindings = <&kp NUMBER_1>, <&kp EXCLAMATION>;
