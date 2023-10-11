@@ -62,14 +62,14 @@
         num_9: num_9_lparen {
             compatible = "zmk,behavior-mod-morph";
             label = "NUMBER_9_LPAREN";
-            bindings = <&kp NUMBER_9>, <&kp LPAREN>;
+            bindings = <&kp NUMBER_9>, <&kp LPAR>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         num_0: num_0_rparen {
             compatible = "zmk,behavior-mod-morph";
             label = "NUMBER_0_RPAREN";
-            bindings = <&kp NUMBER_0>, <&kp RPAREN>;
+            bindings = <&kp NUMBER_0>, <&kp RPAR>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
