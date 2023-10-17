@@ -140,7 +140,7 @@
             bindings = <
 &kp LC(TAB)     &kp N1      &kp UP      &kp N3        &kp N4        &kp N5          &kp N6    &num_7  &num_8    &num_9  &backslash  &kp BSPC
 &trans          &kp LEFT    &kp DOWN    &kp RIGHT  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &num_4  &num_5    &num_6  &trans      &trans
-&kp LSHFT       &trans      &trans      &trans        &trans        &trans          &trans    &N1     &num_2    &num_3  &trans      &trans
+&kp LSHFT       &trans      &trans      &trans        &trans        &trans         &trans    &kp N1     &num_2    &num_3  &trans      &trans
                                         &kp LGUI      &LALT        &kp SPACE       &kp RET   &num_0  &kp RALT
             >;
         };
