@@ -19,95 +19,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-
-        num_1: num_1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "N1";
-            bindings = <&kp NUMBER_1>, <&kp EXCLAMATION>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_2: num_2_at {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_2_AT";
-            bindings = <&kp NUMBER_2>, <&kp AT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_3: num_3_hash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_3_HASH";
-            bindings = <&kp NUMBER_3>, <&kp HASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_4: num_4_dollar {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_4_DOLLAR";
-            bindings = <&kp NUMBER_4>, <&kp DOLLAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_5: num_5_percent {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_5_PERCENT";
-            bindings = <&kp NUMBER_5>, <&kp PERCENT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_6: num_6_caret {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_6_CARET";
-            bindings = <&kp NUMBER_6>, <&kp CARET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_7: num_7_ampersand {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_7_AMPERSAND";
-            bindings = <&kp NUMBER_7>, <&kp AMPERSAND>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_8: num_8_asterisk {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_8_ASTERISK";
-            bindings = <&kp NUMBER_8>, <&kp ASTERISK>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_9: num_9_lparen {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_9_LPAREN";
-            bindings = <&kp NUMBER_9>, <&kp LPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        num_0: num_0_rparen {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMBER_0_RPAREN";
-            bindings = <&kp NUMBER_0>, <&kp RPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        backslash: backslash_pipe {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKSLASH_PIPE";
-            bindings = <&kp BACKSLASH>, <&kp PIPE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     keymap {
@@ -138,10 +49,10 @@
 
             label = "Lower";
             bindings = <
-&kp LC(TAB)     &kp GRAVE   &trans      &kp LBKT    &kp RBKT    &trans          &trans  &num_7  &num_8  &num_9  &backslash  &kp BSPC
-&trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &trans          &trans  &num_4  &num_5  &num_6  &trans      &trans
-&kp LSHFT       &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC    &trans          &trans  &kp N1  &num_2  &num_3  &trans      &trans
-                                        &kp LGUI    &kp LALT    &kp SPACE       &kp RET &num_0  &kp RALT
+&kp LC(TAB)     &kp GRAVE   &trans      &kp LBKT    &kp RBKT    &trans          &trans  &kp N7  &kp N8  &kp N9  &kp BSLH    &kp BSPC
+&trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &trans          &trans  &kp N4  &kp N5  &kp N6  &trans      &trans
+&kp LSHFT       &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC    &trans          &trans  &kp N1  &kp N2  &kp N3  &trans      &trans
+                                        &kp LGUI    &kp LALT    &kp SPACE       &kp RET &KP N0  &kp RALT
             >;
         };
 
