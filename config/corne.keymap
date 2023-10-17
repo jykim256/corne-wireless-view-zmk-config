@@ -131,17 +131,17 @@
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  \| | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT |  4  |  5  |  6  |     |      |
+            // |LCTAB |  1  |  UP  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  \| | BKSP |
+            // |      | LEFT | DOWN | RIGHT | BT4 | BT5 |   | LFT |  4  |  5  |  6  |     |      |
             // | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |     |      |
-            //                    | GUI |     | SPC |   | ENT |  0  | ALT |
+            //                    | GUI | ALT | SPC |   | ENT |  0  | ALT |
 
             label = "Lower";
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &num_7  &num_8    &num_9  &backslash  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &num_4  &num_5    &num_6  &trans      &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &N1     &num_2    &num_3  &trans      &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &num_0  &kp RALT
+&kp LC(TAB)     &kp N1      &kp UP      &kp N3        &kp N4        &kp N5          &kp N6    &num_7  &num_8    &num_9  &backslash  &kp BSPC
+&trans          &kp LEFT    &kp DOWN    &kp RIGHT  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &num_4  &num_5    &num_6  &trans      &trans
+&kp LSHFT       &trans      &trans      &trans        &trans        &trans          &trans    &N1     &num_2    &num_3  &trans      &trans
+                                        &kp LGUI      &LALT        &kp SPACE       &kp RET   &num_0  &kp RALT
             >;
         };
 
