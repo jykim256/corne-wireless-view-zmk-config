@@ -131,17 +131,17 @@
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |LCTAB |  `~ |     |  [  |  ]  |  5  |   |  6  |  7  |  8  |  9  |  \| | BKSP |
-            // |      |  -  |  _  |  (  |  )  | BT5 |   | LFT |  4  |  5  |  6  |     |      |
+            // |LCTAB |  `~ |     |  [  |  ]  |     |   |  6  |  7  |  8  |  9  |  \| | BKSP |
+            // |      |  -  |  _  |  (  |  )  |     |   | LFT |  4  |  5  |  6  |     |      |
             // | SHFT |  +  |  =  |  {  |  }  |     |   |     |  1  |  2  |  3  |     |      |
             //                    | GUI | ALT | SPC |   | ENT |  0  | ALT |
 
             label = "Lower";
             bindings = <
-&kp LC(TAB)     &kp GRAVE   &trans      &kp LBKT    &kp RBKT        &kp N5          &kp N6    &num_7  &num_8    &num_9  &backslash  &kp BSPC
-&trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &kp LEFT  &num_4  &num_5    &num_6  &trans      &trans
-&kp LSHFT       &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC        &trans         &trans    &kp N1     &num_2    &num_3  &trans      &trans
-                                        &kp LGUI    &kp LALT        &kp SPACE       &kp RET   &num_0  &kp RALT
+&kp LC(TAB)     &kp GRAVE   &trans      &kp LBKT    &kp RBKT    &trans          &trans  &num_7  &num_8  &num_9  &backslash  &kp BSPC
+&trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &trans          &trans  &num_4  &num_5  &num_6  &trans      &trans
+&kp LSHFT       &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC    &trans          &trans  &kp N1  &num_2  &num_3  &trans      &trans
+                                        &kp LGUI    &kp LALT    &kp SPACE       &kp RET &num_0  &kp RALT
             >;
         };
 
