@@ -66,8 +66,8 @@
             label = "Raise";
             bindings = <
 &kp TAB    &trans   &trans  &trans    &trans    &trans       &trans      &trans   &trans            &trans      &trans      &kp BSPC
-// &kp ESC    &kp C(A(G(I)))   &kp C(A(S(G(S))))  &kp C(A(S(S)))    &trans    &trans       &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT   &trans  &trans
-&kp ESC    &trans   &trans  &trans    &trans    &trans       &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT   &trans  &trans
+&kp ESC    &kp LC(LA(LG(I)))   &kp LC(LA(LS(LG(S))))  &kp LC(LA(LS(S)))    &trans    &trans       &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT   &trans  &trans
+// &kp ESC    &trans   &trans  &trans    &trans    &trans       &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT   &trans  &trans
 &kp LSHFT  &trans   &trans  &trans    &trans    &trans       &trans  &trans   &trans         &trans    &trans  &trans
                                 &kp LGUI  &kp LALT  &kp SPACE    &kp RET    &trans     &kp RALT
             >;
