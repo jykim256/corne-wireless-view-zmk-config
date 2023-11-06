@@ -58,16 +58,16 @@
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |vsPrj|     |     |     |     |   |     |     |     |     |     | BTCLR |
+            // |  TAB |vsPrj|     |     |     |     |   |     |VOLDN|MUTE |VOLUP|     | BTCLR |
             // | ESC  |iterm|slack|spoti|cursr|     |   | LEFT|DOWN | UP  |RIGHT|     |      |
-            // |      | BT5 |     |     | BT1 |     |   |     |     |     |     |     |      |
+            // |      | BT5 |     |     | BT1 |     |   |     |PREVI|PAUSE| NEXT|     |      |
             //                    | GUI |  ALT| SPC |   | ENT |     | ALT |
 
             label = "Raise";
             bindings = <
-&kp TAB    &kp LA(LG(P)) &trans     &trans    &trans    &trans       &trans      &trans   &trans            &trans      &trans      &bt BT_CLR
-&kp ESC    &kp LC(LA(LG(I)))   &kp LC(LA(LS(LG(S))))  &kp LC(LA(LS(S)))    &kp LC(LA(LS(LG(C))))    &trans       &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT   &trans  &trans
-&trans  &bt BT_SEL 4   &trans  &trans    &bt BT_SEL 0    &trans       &trans  &trans   &trans         &trans    &trans  &trans
+&kp TAB     &kp LA(LG(P))       &trans                  &trans              &trans                  &trans       &trans     &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &trans      &bt BT_CLR
+&kp ESC     &kp LC(LA(LG(I)))   &kp LC(LA(LS(LG(S))))   &kp LC(LA(LS(S)))   &kp LC(LA(LS(LG(C))))   &trans       &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
+&trans      &bt BT_SEL 4        &trans                  &trans              &bt BT_SEL 0            &trans       &trans     &kp C_PREV      &kp C_PP      &kp C_NEXT      &trans      &trans
                                 &kp LGUI  &kp LALT  &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
