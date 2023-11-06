@@ -58,14 +58,14 @@
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |     |vsPrj|     |     |     |   |     |     |     |     |     | BKSP |
+            // |  TAB |vsPrj|     |     |     |     |   |     |     |     |     |     | BKSP |
             // | ESC  |iterm|slack|spoti|cursr|     |   | LEFT|DOWN | UP  |RIGHT|     |      |
             // | BTCLR|     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |  ALT| SPC |   | ENT |     | ALT |
 
             label = "Raise";
             bindings = <
-&kp TAB    &trans   &kp LA(LG(P))  &trans    &trans    &trans       &trans      &trans   &trans            &trans      &trans      &kp BSPC
+&kp TAB    &kp LA(LG(P)) &trans     &trans    &trans    &trans       &trans      &trans   &trans            &trans      &trans      &kp BSPC
 &kp ESC    &kp LC(LA(LG(I)))   &kp LC(LA(LS(LG(S))))  &kp LC(LA(LS(S)))    &kp LC(LA(LS(LG(C))))    &trans       &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT   &trans  &trans
 // &kp ESC    &trans   &trans  &trans    &trans    &trans       &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT   &trans  &trans
 &bt BT_CLR  &bt BT_SEL 4   &trans  &trans    &bt BT_SEL 0    &trans       &trans  &trans   &trans         &trans    &trans  &trans
