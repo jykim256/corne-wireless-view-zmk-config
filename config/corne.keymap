@@ -117,7 +117,7 @@
             // | SHFT |  +  |  =  |  {  |  }  |     |   |     |  1  |  2  |  3  |     |      |
             //                    | CTRL | ALT | SPC |   | ENT |  0  |BKSP |
 
-            display-name = "Lower";
+            display-name = "WIN Lower";
             bindings = <
 &kp LC(TAB)     &kp GRAVE   &trans      &kp LBKT    &kp RBKT    &trans          &trans  &kp N7  &kp N8  &kp N9  &kp BSLH    &kp BSPC
 &trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &trans          &trans  &kp N4  &kp N5  &kp N6  &trans      &h_long_t_bl 0
