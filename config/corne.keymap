@@ -31,7 +31,7 @@
             // | SHFT |  Z  |  X  |  C      |  V        |  B  |   |  N  |  M        |  ,        |  .  |  /  | SHIFT |
             //                    | GUI/ENT | OPT/SPC   | LWR |   | RSE | CTRL/SPC  | GUI/BKSP  |
 
-            label = "Base";
+            display-name = "Base";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E            &kp R                 &kp T    &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
 &kp ESC    &kp A  &kp S  &kp D            &kp F                 &kp G    &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
@@ -47,7 +47,7 @@
             // | SHFT |  +  |  =  |  {  |  }  |     |   |     |  1  |  2  |  3  |     |      |
             //                    | GUI | ALT | SPC |   | ENT |  0  |BKSP |
 
-            label = "Lower";
+            display-name = "Lower";
             bindings = <
 &kp LC(TAB)     &kp GRAVE   &trans      &kp LBKT    &kp RBKT    &trans          &trans  &kp N7  &kp N8  &kp N9  &kp BSLH    &kp BSPC
 &trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &trans          &trans  &kp N4  &kp N5  &kp N6  &trans      &trans
@@ -63,7 +63,7 @@
             // |      | BT5 |     |     | BT1 |     |   |     |PREVI|PAUSE| NEXT|     |      |
             //                    | GUI |  ALT| SPC |   | ENT |     | ALT |
 
-            label = "Raise";
+            display-name = "Raise";
             bindings = <
 &kp TAB     &kp LA(LG(P))       &trans                  &trans              &trans                  &trans       &trans     &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &trans      &bt BT_CLR
 &kp ESC     &kp LC(LA(LG(I)))   &kp LC(LA(LS(LG(S))))   &kp LC(LA(LS(S)))   &kp LC(LA(LS(LG(C))))   &trans       &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
