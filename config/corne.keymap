@@ -80,14 +80,14 @@
             // -----------------------------------------------------------------------------------------
             // |  TAB |vsPrj|     |     |     |     |   |     |VOLDN|MUTE |VOLUP|     | BTCLR |
             // | ESC  |iterm|slack|spoti|cursr|     |   | LEFT|DOWN | UP  |RIGHT|     |      |
-            // |      | BT5 |     |BT_NXT| BT1 |     |   |     |PREVI|PAUSE| NEXT|     |      |
+            // | SHFT | BT5 |     |BT_NXT| BT1 |     |   |     |PREVI|PAUSE| NEXT|     |      |
             //                    | GUI |  ALT| SPC |   | ENT |     | ALT |
 
             display-name = "Raise";
             bindings = <
 &kp TAB     &kp LA(LG(P))       &trans                  &trans              &trans                  &trans       &trans     &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &trans      &bt BT_CLR
 &kp ESC     &kp LC(LA(LG(I)))   &kp LC(LA(LS(LG(S))))   &kp LC(LA(LS(S)))   &kp LC(LA(LS(LG(C))))   &trans       &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
-&trans      &bt BT_SEL 4        &trans                  &bt BT_NXT              &bt BT_SEL 0            &trans       &trans     &kp C_PREV      &kp C_PP      &kp C_NEXT      &trans      &trans
+&kp LSHFT      &bt BT_SEL 4        &trans                  &bt BT_NXT              &bt BT_SEL 0            &trans       &trans     &kp C_PREV      &kp C_PP      &kp C_NEXT      &trans      &trans
                                 &kp LGUI  &kp LALT  &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
@@ -130,14 +130,14 @@
             // -----------------------------------------------------------------------------------------
             // |  TAB |F1|F2|F3|F4|F5|   |     |VOLDN|MUTE |VOLUP|     | BTCLR |
             // | ESC  |F6|F7|F8|F9|F10|   | LEFT|DOWN | UP  |RIGHT|     |      |
-            // |      | F11 |F12|F13| F14 |F15|   |     |PREVI|PAUSE| NEXT|BT_NXT|      |
+            // |SHIFT | F11 |F12|F13| F14 |F15|   |     |PREVI|PAUSE| NEXT|BT_NXT|      |
             //                    | CTRL |  ALT| SPC |   | ENT |     | ALT |
 
             display-name = "WIN Raise";
             bindings = <
 &kp TAB     &kp F1       &kp F2                  &kp F3              &kp F4                  &kp F5       &trans     &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &trans      &bt BT_CLR
 &kp ESC     &kp F6   &kp F7   &kp F8   &kp F9   &kp F10       &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
-&trans      &kp F11        &kp F12                  &kp F13              &kp F14             &kp F15       &trans     &kp C_PREV      &kp C_PP      &kp C_NEXT      &bt BT_NXT      &trans
+&kp LSHFT      &kp F11        &kp F12                  &kp F13              &kp F14             &kp F15       &trans     &kp C_PREV      &kp C_PP      &kp C_NEXT      &bt BT_NXT      &trans
                                 &kp LCTRL  &kp LALT  &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
