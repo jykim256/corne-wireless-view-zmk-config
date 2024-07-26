@@ -19,6 +19,26 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
+        h_long_t_bl: hold_long_tap_balance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD LONG TAP BALANCED";
+            #binding-cells = <2>;
+            tapping-term-ms = <3000>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&to>, <&kp>;
+        };
+
+        bt_h_long_t_bl: hold_long_tap_balance { // prevent BT_CLR from being triggered by a quick tap
+            compatible = "zmk,behavior-hold-tap";
+            label = "BLUETOOTH HOLD LONG TAP BALANCED";
+            #binding-cells = <2>;
+            tapping-term-ms = <3000>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&bt>, <&kp>;
+        };
     };
 
     keymap {
@@ -43,14 +63,14 @@
         lower_layer {
             // -----------------------------------------------------------------------------------------
             // |LCTAB |  `~ |     |  [  |  ]  |     |   |     |  7  |  8  |  9  |  \| | BKSP |
-            // |      |  -  |  _  |  (  |  )  |     |   | LFT |  4  |  5  |  6  |     |      |
+            // |      |  -  |  _  |  (  |  )  |     |   | LFT |  4  |  5  |  6  |     | WINDOWSMODE |
             // | SHFT |  +  |  =  |  {  |  }  |     |   |     |  1  |  2  |  3  |     |      |
             //                    | GUI | ALT | SPC |   | ENT |  0  |BKSP |
 
             display-name = "Lower";
             bindings = <
 &kp LC(TAB)     &kp GRAVE   &trans      &kp LBKT    &kp RBKT    &trans          &trans  &kp N7  &kp N8  &kp N9  &kp BSLH    &kp BSPC
-&trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &trans          &trans  &kp N4  &kp N5  &kp N6  &trans      &trans
+&trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &trans          &trans  &kp N4  &kp N5  &kp N6  &trans      &h_long_t_bl 3
 &kp LSHFT       &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC    &trans          &trans  &kp N1  &kp N2  &kp N3  &trans      &trans
                                         &kp LGUI    &kp LALT    &kp SPACE       &kp RET &kp N0  &kp BSPC
             >;
@@ -60,16 +80,67 @@
             // -----------------------------------------------------------------------------------------
             // |  TAB |vsPrj|     |     |     |     |   |     |VOLDN|MUTE |VOLUP|     | BTCLR |
             // | ESC  |iterm|slack|spoti|cursr|     |   | LEFT|DOWN | UP  |RIGHT|     |      |
-            // |      | BT5 |     |     | BT1 |     |   |     |PREVI|PAUSE| NEXT|     |      |
+            // |      | BT5 |     |BT_NXT| BT1 |     |   |     |PREVI|PAUSE| NEXT|     |      |
             //                    | GUI |  ALT| SPC |   | ENT |     | ALT |
 
             display-name = "Raise";
             bindings = <
-&kp TAB     &kp LA(LG(P))       &trans                  &trans              &trans                  &trans       &trans     &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &trans      &bt BT_CLR
+&kp TAB     &kp LA(LG(P))       &trans                  &trans              &trans                  &trans       &trans     &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &trans      &bt_h_long_t_bl BT_CLR ESC
 &kp ESC     &kp LC(LA(LG(I)))   &kp LC(LA(LS(LG(S))))   &kp LC(LA(LS(S)))   &kp LC(LA(LS(LG(C))))   &trans       &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
 &trans      &bt BT_SEL 4        &trans                  &bt BT_NXT              &bt BT_SEL 0            &trans       &trans     &kp C_PREV      &kp C_PP      &kp C_NEXT      &trans      &trans
                                 &kp LGUI  &kp LALT  &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
+
+
+
+        windows_default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E      |  R        |  T  |   |  Y  |  U        |  I        |  O  |  P  | BKSP |
+            // | ESC  |  A  |  S  |  D      |  F        |  G  |   |  H  |  J        |  K        |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C      |  V        |  B  |   |  N  |  M        |  ,        |  .  |  /  | SHIFT |
+            //                    | CTRL/ENT | OPT/SPC   | LWR |   | RSE | CTRL/SPC  | GUI/BKSP  |
+
+            display-name = "WIN Base";
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E            &kp R                 &kp T    &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp ESC    &kp A  &kp S  &kp D            &kp F                 &kp G    &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C            &kp V                 &kp B    &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                         &ht_bl LCTRL RET  &ht_bl LALT SPACE     &mo 4    &mo 5  &ht_bl LCTRL SPACE  &ht_bl LGUI BSPC
+            >;
+        };
+
+        windows_lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // |LCTAB |  `~ |     |  [  |  ]  |     |   |     |  7  |  8  |  9  |  \| | BKSP |
+            // |      |  -  |  _  |  (  |  )  |     |   | LFT |  4  |  5  |  6  |     | WINDOWSMODE |
+            // | SHFT |  +  |  =  |  {  |  }  |     |   |     |  1  |  2  |  3  |     |      |
+            //                    | CTRL | ALT | SPC |   | ENT |  0  |BKSP |
+
+            display-name = "Lower";
+            bindings = <
+&kp LC(TAB)     &kp GRAVE   &trans      &kp LBKT    &kp RBKT    &trans          &trans  &kp N7  &kp N8  &kp N9  &kp BSLH    &kp BSPC
+&trans          &kp MINUS   &kp UNDER   &kp LPAR    &kp RPAR    &trans          &trans  &kp N4  &kp N5  &kp N6  &trans      &h_long_t_bl 0
+&kp LSHFT       &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC    &trans          &trans  &kp N1  &kp N2  &kp N3  &trans      &trans
+                                        &kp LCTRL    &kp LALT    &kp SPACE       &kp RET &kp N0  &kp BSPC
+        };
+
+        windows_raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |F1|F2|F3|F4|F5|   |     |VOLDN|MUTE |VOLUP|     | BTCLR |
+            // | ESC  |F6|F7|F8|F9|F10|   | LEFT|DOWN | UP  |RIGHT|     |      |
+            // |      | F11 |F12|F13| F14 |F15|   |     |PREVI|PAUSE| NEXT|BT_NXT|      |
+            //                    | CTRL |  ALT| SPC |   | ENT |     | ALT |
+
+            display-name = "WIN Raise";
+            bindings = <
+&kp TAB     &kp F1       &kp F2                  &kp F3              &kp F4                  &kp F5       &trans     &kp C_VOL_DN      &kp C_MUTE      &kp C_VOL_UP      &trans      &bt_h_long_t_bl BT_CLR ESC
+&kp ESC     &kp F6   &kp F7   &kp F8   &kp F9   &kp F10       &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
+&trans      &kp F11        &kp F12                  &kp F13              &kp F14             &kp F15       &trans     &kp C_PREV      &kp C_PP      &kp C_NEXT      &bt BT_NXT      &trans
+                                &kp LCTRL  &kp LALT  &kp SPACE    &kp RET    &trans     &kp RALT
+            >;
+        };
+
+
     };
 };
