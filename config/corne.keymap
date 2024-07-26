@@ -30,7 +30,7 @@
             bindings = <&to>, <&kp>;
         };
 
-        bt_h_long_t_bl: hold_long_tap_balance { // prevent BT_CLR from being triggered by a quick tap
+        bt_h_long_t_bl: bluetooth_hold_long_tap_balance { // prevent BT_CLR from being triggered by a quick tap
             compatible = "zmk,behavior-hold-tap";
             label = "BLUETOOTH HOLD LONG TAP BALANCED";
             #binding-cells = <2>;
